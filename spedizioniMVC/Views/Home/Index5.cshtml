@@ -1,0 +1,40 @@
+﻿@model IEnumerable<spedizioniMVC.Models.Aggiornamento>
+@{
+    ViewBag.Title = "Index5";
+}
+
+
+
+<h2>lista aggiornamento spedizioni privati</h2>
+
+<h2>aggiornamento</h2>
+
+<table class="table table-hover table-bordered container text-center">
+    <tr>
+        <th></th>
+        <th>IDspedizione</th>
+        <th>stato</th>
+        <th>luogo</th>
+        <th>descrizione</th>
+   
+
+
+    </tr>
+
+    @foreach (spedizioniMVC.Models.Aggiornamento s in Model)
+    {
+        <tr>
+            <td>@s.IDspedizione</td>
+            <td>@s.stato</td>
+            <td>@s.luogo</td>
+            <td>@s.descrizione</td>
+          
+
+
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("inserisci nuovo aggironamento spedizione privato", "CreaAggiornamentoPrivato")
+</div>

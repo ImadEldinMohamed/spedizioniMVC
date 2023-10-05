@@ -1,0 +1,40 @@
+﻿@model IEnumerable<spedizioniMVC.Models.AggiornamentoSpedizioneAzienda>
+@{
+    ViewBag.Title = "Index5";
+}
+
+
+
+<h2>lista aggiornamento spedizioni AZIENDA</h2>
+
+<h2>aggiornamento</h2>
+
+<table class="table table-hover table-bordered container text-center">
+    <tr>
+        <th></th>
+        <th>IDspedizioneA</th>
+        <th>stato</th>
+        <th>luogo</th>
+        <th>descrizione</th>
+
+
+
+    </tr>
+
+    @foreach (spedizioniMVC.Models.AggiornamentoSpedizioneAzienda s in Model)
+    {
+        <tr>
+            <td>@s.IDspedizioneA</td>
+            <td>@s.stato</td>
+            <td>@s.luogo</td>
+            <td>@s.descrizione</td>
+
+
+
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("inserisci nuovo aggiornamento spedizione azienda", "CreaAggiornamentoAzienda")
+</div>

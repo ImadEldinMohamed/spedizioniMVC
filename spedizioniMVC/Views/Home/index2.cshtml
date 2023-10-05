@@ -1,0 +1,31 @@
+﻿@model IEnumerable<spedizioniMVC.Models.Azienda>
+@{
+    ViewBag.Title = "index2";
+}
+
+<h2>lista delle aziende</h2>
+
+<table class="table table-hover table-bordered container text-center">
+    <tr>
+        <th>nome</th>
+        <th>partita iva</th>
+       
+
+
+    </tr>
+
+    @foreach (spedizioniMVC.Models.Azienda a in Model)
+    {
+        <tr>
+            <td>@a.nome</td>
+            <td>@a.P_iva</td>
+           
+
+
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("inserisci nuova azienda", "CreateAzienda")
+</div>
